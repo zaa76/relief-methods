@@ -88,6 +88,7 @@ apt -y install \
  wget https://sqlite.org/2022/sqlite-autoconf-3380500.tar.gz
 tar -xzvf sqlite-autoconf-3380500.tar.gz
 pushd sqlite-autoconf-3380500
+
 ./configure \
 	--prefix=/usr/local \
 	--disable-static \
