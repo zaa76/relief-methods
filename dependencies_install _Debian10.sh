@@ -201,6 +201,17 @@ make -j 6
 cp apps/gdal_contour /usr/local/bin/gdal_contour_smooth
 popd
 
+wget https://github.com/postgis/postgis/archive/refs/tags/3.2.1.tar.gz -O postgis.tar.gz
+tar -xzvf postgis.tar.gz
+pushd postgis-3.2.1
+./autogen.sh
+./configure \
+	--prefix=/usr/local \
+	--with-raster-dblwarning
+	--enable-shared=no --enable-static=yes
+make -j 4 && make && make install
+popd
+
 git clone https://github.com/mapnik/mapnik
 pushd mapnik
 git checkout v3.0.22
