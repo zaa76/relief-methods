@@ -1,4 +1,4 @@
-OS is Debian 10 (Buster) x64
+OS is Debian 11 (bullseye) x64
 
 
 echo 'deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main' > /etc/apt/sources.list.d/postgresql.list
@@ -53,7 +53,7 @@ apt -y install \
 	libboost-program-options1.74-dev libboost-program-options1.74.0	\
 	protobuf-c-compiler
 
-# Grafic
+# Graphics Libraries
 apt -y install \
 	libwebp6 libwebp-dev \
 	libcfitsio9 libcfitsio-dev \
@@ -173,8 +173,115 @@ pushd librttopo
 make -j 2 && make install && ldconfig
 popd
 
+wget http://www.gaia-gis.it/gaia-sins/libspatialite-sources/libspatialite-5.0.1.tar.gz
+tar -xzvf libspatialite-5.0.1.tar.gz
+pushd libspatialite-5.0.1
+CFLAGS="-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1" ./configure --prefix=/usr/local
+make -j 4 && make install && ldconfig
+popd
 
+wget http://www.gaia-gis.it/gaia-sins/librasterlite2-sources/librasterlite2-1.1.0-beta1.tar.gz
+tar -xzvf librasterlite2-1.1.0-beta1.tar.gz
+pushd librasterlite2-1.1.0-beta1
+CPPFLAGS="-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1" ./configure --prefix=/usr/local
+make -j 2 && make install && ldconfig
+popd
 
+wget https://github.com/libogdi/ogdi/releases/download/ogdi_4_1_0/ogdi-4.1.0.tar.gz
+tar -xzvf ogdi-4.1.0.tar.gz 
+pushd ogdi-4.1.0
+#patch -p1 -i ../ogdi-patch/ogdi-format.patch 
+TOPDIR=`pwd` TARGET=Linux ./configure --prefix=/usr/local --with-expat --with-zlib
+TOPDIR=`pwd` TARGET=Linux make
+TOPDIR=`pwd` TARGET=Linux make install
+cp -v ogdi.pc /usr/local/lib/pkgconfig/
+ldconfig
+popd
+
+wget https://github.com/OSGeo/gdal/releases/download/v3.5.0/gdal-3.5.0.tar.gz
+tar -xzvf gdal-3.5.0.tar.gz 
+pushd gdal-3.5.0
+./autogen.sh
+CXXFLAGS="-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1" ./configure \
+	--prefix=/usr/local \
+	--with-pg=yes \
+	--with-rasterlite2=yes \
+	--with-jpeg12=yes \
+	--with-liblzma=yes \
+	--with-freexl=yes \
+	--with-ogdi=yes \
+	--with-spatialite=yes \
+	--with-webp=yes \
+	--with-python=yes \
+	--with-jpeg=yes \
+	--with-poppler=yes \
+	--with-sfcgal=yes \
+	--with-armadillo=yes \
+	--with-ecw=yes \
+	--with-qhull=yes \
+	--with-cfitsio=yes \
+	--with-proj=/usr/local \
+	--with-zstd=yes
+make -j 6 && make install && ldconfig
+popd
+
+pip3 install --global-option=build_ext --global-option="-I/usr/local/include" GDAL==`gdal-config --version`
+
+wget https://trac.osgeo.org/gdal/raw-attachment/ticket/5848/0001-Contours-smoothing-by-sliding-averaging-algorithm.patch
+wget http://download.osgeo.org/gdal/2.0.2/gdal-2.0.2.tar.gz
+tar -xzvf gdal-2.0.2.tar.gz
+pushd gdal-2.0.2
+patch -p2 -i ../0001-Contours-smoothing-by-sliding-averaging-algorithm.patch
+./autogen.sh
+CXXFLAGS="-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1" ./configure \
+	--enable-shared=no \
+	--enable-static=yes \
+	--without-ld-shared \
+	--prefix=/usr/local \
+	--with-libjson-c=internal
+make -j 6	
+cp apps/gdal_contour /usr/local/bin/gdal_contour_smooth
+popd
+
+git clone https://github.com/openstreetmap/osm2pgsql.git
+pushd osm2pgsql && mkdir build && pushd build
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_CXX_FLAGS="-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1" ..
+make -j 2 && make install && ldconfig
+popd && popd
+
+wget http://www.imagemagick.org/download/ImageMagick.tar.bz2
+tar -xjvf ImageMagick.tar.bz2
+cd ImageMagick*
+./configure \
+	--prefix=/usr \
+	--with-modules=yes \
+	--with-wmf=yes \
+	--with-rsvg=yes \
+	--with-openjp2=yes \
+	--with-gslib=yes
+make -j 4 && make install && ldconfig && cd ..
+
+wget https://github.com/postgis/postgis/archive/refs/tags/3.2.1.tar.gz -O postgis.tar.gz
+tar -xzvf postgis.tar.gz
+pushd postgis-3.2.1
+./autogen.sh
+./configure \
+	--prefix=/usr/local \
+	--with-raster-dblwarning
+	--enable-shared=no --enable-static=yes
+make -j 4 && make && make install
+popd
+
+wget https://github.com/mapnik/mapnik/releases/download/v3.1.0/mapnik-v3.1.0.tar.bz2
+tar -xjvf mapnik-v3.1.0.tar.bz2
+pushd mapnik-v3.1.0
+PYTHON=python3 ./configure \
+	PREFIX=/usr/local \
+	CUSTOM_CXXFLAGS="-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1" \
+	XMLPARSER=libxml2
+make PYTHON=python3
+make PYTHON=python3 install && ldconfig 
+popd
 
 
 
