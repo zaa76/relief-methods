@@ -1,4 +1,4 @@
-# OS is Debian 11 (bullseye) x64
+# OS is Debian 11 (bullseye) x64qqqqq
 
 
 echo 'deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main' > /etc/apt/sources.list.d/postgresql.list
