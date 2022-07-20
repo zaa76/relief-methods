@@ -228,22 +228,6 @@ popd
 
 pip3 install --global-option=build_ext --global-option="-I/usr/local/include" GDAL==`gdal-config --version`
 
-wget https://trac.osgeo.org/gdal/raw-attachment/ticket/5848/0001-Contours-smoothing-by-sliding-averaging-algorithm.patch
-wget http://download.osgeo.org/gdal/2.0.2/gdal-2.0.2.tar.gz
-tar -xzvf gdal-2.0.2.tar.gz
-pushd gdal-2.0.2
-patch -p2 -i ../0001-Contours-smoothing-by-sliding-averaging-algorithm.patch
-./autogen.sh
-CXXFLAGS="-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1" ./configure \
-	--enable-shared=no \
-	--enable-static=yes \
-	--without-ld-shared \
-	--prefix=/usr/local \
-	--with-libjson-c=internal
-make -j 6	
-cp apps/gdal_contour /usr/local/bin/gdal_contour_smooth
-popd
-
 git clone https://github.com/openstreetmap/osm2pgsql.git
 pushd osm2pgsql && mkdir build && pushd build
 cmake -DCMAKE_INSTALL_PREFIX=/usr/local -DCMAKE_CXX_FLAGS="-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1" ..
