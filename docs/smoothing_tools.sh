@@ -17,7 +17,8 @@ popd
 
 # Rust compiler for build WHITEBOX_TOOLS
 curl https://sh.rustup.rs -sSf | sh
-ln -s ~/.cargo/bin/cargo -t /usr/local/bin/
+source $HOME/.cargo/env
+cargo -V
 
 # whiebox_tools
 wget https://github.com/jblindsay/whitebox-tools/archive/refs/tags/v2.0.0.tar.gz
