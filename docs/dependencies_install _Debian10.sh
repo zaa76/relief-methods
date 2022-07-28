@@ -184,8 +184,6 @@ CXXFLAGS="-DACCEPT_USE_OF_DEPRECATED_PROJ_API_H=1" ./configure \
 make -j 4 && make install && ldconfig
 popd
 
-
-
 wget https://github.com/postgis/postgis/archive/refs/tags/3.2.1.tar.gz -O postgis.tar.gz
 tar -xzvf postgis.tar.gz
 pushd postgis-3.2.1
