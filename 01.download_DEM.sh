@@ -10,8 +10,6 @@ mkdir -p $work_dir
 
 server_url="http://e4ftl01.cr.usgs.gov/MEASURES/SRTMGL1.003/2000.02.11"
 #server_url="https://step.esa.int/auxdata/dem/SRTMGL1"
-#https://step.esa.int/auxdata/dem/SRTMGL1/N00E006.SRTMGL1.hgt.zip
-# wget --user=zimasanya --password=22031976Zaa http://e4ftl01.cr.usgs.gov/MEASURES/SRTMGL1.003/2000.02.11/S02E031.SRTMGL1.hgt.zip
 
 file_suffix="SRTMGL1.hgt.zip"
 
@@ -25,7 +23,7 @@ for i in $(seq $hgt_min_lat $hgt_max_lat) ; do
 	    --mirror \
 	    --continue \
 	    --quiet \
-	    --user=zimasanya --password=22031976Zaa \
+	    --user=<user EarthExplorer> --password=<password EarthExplorer> \
 	    --output-document=${work_dir}/${file_name} \
 	    "${server_url}/${file_name}"
 
