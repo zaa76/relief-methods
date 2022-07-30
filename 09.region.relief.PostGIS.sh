@@ -124,7 +124,7 @@ create_sql hypso $tile_name
 loadToDB shade $tile_name
 loadToDB hypso $tile_name
 
-#echo " > [CLEAR]: "
-#rm -fv ${out_dir}/${tile_name}.*.sql
+echo " > [CLEAR]: "
+rm -fv ${out_dir}/${tile_name}.*.sql
 
 echo "done."
