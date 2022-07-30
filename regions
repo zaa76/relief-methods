@@ -1,0 +1,158 @@
+#---- Ukraine -----
+country="ukraine"
+country_hgt="ukraine"
+hgt_lat_semisphere="N"
+hgt_lon_semisphere="E"
+hgt_min_lon="22"
+hgt_min_lat="44"
+hgt_max_lon="41"
+hgt_max_lat="53"
+
+   # Center
+#district="center"
+#district_extent="27.2235 50.6296 35.6794 47.6304" # ulx uly lrx lry
+#region="cherkasy"              #---
+#region="kirovohrad"            #---
+#region="poltava"               #---
+#region="vinnytsia"             #---
+
+   # West
+#district="west"
+#district_extent="22.0051 52.0028 28.0328 47.6527" # ulx uly lrx lry
+#region="chernivtsi"            #+--
+#region="lviv"                  #+--
+#region="zakarpattia"           #+--
+#region="volyn"                 #+--
+#region="khmelnytskyi"          #+--
+#region="ivano-frankivsk"       #+--
+#region="rivne"                 #+--
+#region="ternopil"              #+--
+
+   # North
+#district_extent="27.0696 52.447 35.7894 49.1045" # ulx uly lrx lry
+#district="zhytomyr"            #---
+#district="sumy"                #---
+#district="kyiv"                #---
+#district="kyivoblast"          #---
+#district="chernihiv"           #---
+
+   # East
+#district="east"
+#district_extent="32.9145 50.511 40.3155 46.8022" # ulx uly lrx lry
+#region="dnipropetrovsk"        #---
+#region="donetsk"               #---
+#region="luhansk"               #---
+#region="kharkiv"               #---
+
+   # South
+district="south"
+district_extent="27.5798 48.2693 37.5919 44.2016" # ulx uly lrx lry
+region="crimea"                #++-
+#region="sevastopol"            #+--
+#region="mykolaiv"              #+--
+#region="odesa"                 #---
+#region="zaporizhia"            #---
+#region="kherson"               #---
+#------------------
+
+#---- Moldova -----
+#country="moldova"
+#country_hgt="moldova"
+#hgt_lat_semisphere="N"
+#hgt_lon_semisphere="E"
+#hgt_min_lon="26"
+#hgt_min_lat="45"
+#hgt_max_lon="31"
+#hgt_max_lat="49"
+#district="moldova"
+#district_extent="26.6164 48.4921 30.1638 45.4672" #left=26.6164 bottom=45.4672 right=30.1638 top=48.4921 | ulx uly lrx lry
+#region="moldova"
+#-----------------
+
+#---- Belarus -----
+#country="belarus"
+#country_hgt="south"
+#hgt_lat_semisphere="N"
+#hgt_lon_semisphere="E"
+#hgt_min_lon="22"
+#hgt_min_lat="51"
+#hgt_max_lon="33"
+#hgt_max_lat="54"
+#district="south"
+#district_extent="22.76 51.08 32.87 53.55"
+#region="brest"
+#region="homyel"
+#------------------
+
+#----- Russia -----
+#country="russia"
+
+   # Central Federal
+#country_hgt="central-fed"
+#hgt_lat_semisphere="N"
+#hgt_lon_semisphere="E"
+#hgt_min_lon="30"
+#hgt_min_lat="49"
+#hgt_max_lon="48"
+#hgt_max_lat="60"
+#districr="central-fed"
+#district_extent="31.1832 54.1408 42.9974 49.432" 30.7283 49.5578 47.6396 59.6237
+#region="belgorod"
+#region="bryansk"
+#region="voronezh"
+#region="kursk"
+
+   # South Federal
+#country_hgt="south-fed"
+#hgt_lat_semisphere="N"
+#hgt_lon_semisphere="E"
+#hgt_min_lon="32"
+#hgt_min_lat="43"
+#hgt_max_lon="50"
+#hgt_max_lat="52"
+#distrist="south-fed"
+#district_extent="36.5225 50.3079 44.5136 43.0924" 32.2015 43.2244 49.8862 51.2477 (left,bottom,right,top|ulx uly lrx lry)
+#region="krasnodarkrai"
+#region="rostov"
+
+   # Kaliningrad
+#country_hgt="kaliningrad"
+#hgt_lat_semisphere="N"
+#hgt_lon_semisphere="E"
+#hgt_min_lon="19"
+#hgt_min_lat="54"
+#hgt_max_lon="23"
+#hgt_max_lat="56"
+#district_extent="19.4041 55.3843 22.8868 54.3182"  # ulx uly lrx lry
+#district="kaliningrad"
+#region="kaliningrad"
+#-----------------
+
+#---- Hungary -----
+#country="hungary"
+#country_hgt="hungary"
+#district="greatplainandnorth"
+#region="greatplainandnorth"
+#district_extent="19.999 48.6667 23.2662 46.9572"
+#-----------------
+
+#country="poland"
+#country_hgt="poland"
+#district="lubelskie"
+#district="podkarpackie"
+
+#---- Romania ----
+#country="romania"
+#country_hgt="romania"
+#district="botosani"
+#district="maramures"
+#district="satumare"
+#district="suceava"
+#district="tulcea"
+#-----------------
+
+#---- Slovenia ----
+#country="slovenia"
+#country_hgt="slovenia"
+#district="eastern"
+#------------------
