@@ -85,3 +85,19 @@
 		<TextSymbolizer fontset-name="sans-book" size="8" fill="#bc7e55" upright="left" comp-op="multiply" halo-radius="1" halo-fill="rgba(255,255,255,0.3)" placement="line" max-char-angle-delta="10" label-position-tolerance="100" minimum-path-length="300" spacing="800">[ele]</TextSymbolizer>
 	</Rule>
 </Style>
+
+<Layer name="contours">
+	<StyleName>contours</StyleName>
+	<Datasource>
+		<Parameter name="table">(SELECT way,ele FROM contours.ele_line) AS contours </Parameter>
+		<Parameter name="type">postgis</Parameter>
+		<Parameter name="password">gis_password</Parameter>
+		<Parameter name="host">10.72.150.49</Parameter>
+		<Parameter name="port">5432</Parameter>
+		<Parameter name="user">gis</Parameter>
+		<Parameter name="dbname">relief</Parameter>
+		<Parameter name="estimate_extent">false</Parameter>
+		<Parameter name="extent">-20037508,-19929239,20037508,19929239</Parameter>
+	</Datasource>
+</Layer>
+
