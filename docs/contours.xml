@@ -1,5 +1,5 @@
 <Style name="contours">
-	<!-- 100 m -->
+<!-- 100 m -->
 	<Rule>
 		&maxscale_zoom11;
 		&minscale_zoom11;
