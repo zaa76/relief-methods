@@ -9,50 +9,50 @@ hgt_max_lon="41"
 hgt_max_lat="53"
 
    # Center
-#district="center"
-#district_extent="27.2235 50.6296 35.6794 47.6304" # ulx uly lrx lry
-#region="cherkasy"              #---
-#region="kirovohrad"            #---
-#region="poltava"               #---
-#region="vinnytsia"             #---
+district="center"
+district_extent="27.2235 50.6296 35.6794 47.6304" # ulx uly lrx lry
+region="cherkasy"              
+#region="kirovohrad"            
+#region="poltava"               
+#region="vinnytsia"             
 
    # West
 #district="west"
 #district_extent="22.0051 52.0028 28.0328 47.6527" # ulx uly lrx lry
-#region="chernivtsi"            #+--
-#region="lviv"                  #+--
-#region="zakarpattia"           #+--
-#region="volyn"                 #+--
-#region="khmelnytskyi"          #+--
-#region="ivano-frankivsk"       #+--
-#region="rivne"                 #+--
-#region="ternopil"              #+--
+#region="chernivtsi"            
+#region="lviv"                  
+#region="zakarpattia"           
+#region="volyn"                 
+#region="khmelnytskyi"          
+#region="ivano-frankivsk"       
+#region="rivne"                 
+#region="ternopil"              
 
    # North
 #district_extent="27.0696 52.447 35.7894 49.1045" # ulx uly lrx lry
-#district="zhytomyr"            #---
-#district="sumy"                #---
-#district="kyiv"                #---
-#district="kyivoblast"          #---
-#district="chernihiv"           #---
+#district="zhytomyr"            
+#district="sumy"                
+#district="kyiv"                
+#district="kyivoblast"          
+#district="chernihiv"           
 
    # East
 #district="east"
 #district_extent="32.9145 50.511 40.3155 46.8022" # ulx uly lrx lry
-#region="dnipropetrovsk"        #---
-#region="donetsk"               #---
-#region="luhansk"               #---
-#region="kharkiv"               #---
+#region="dnipropetrovsk"        
+#region="donetsk"               
+#region="luhansk"               
+#region="kharkiv"               
 
    # South
-district="south"
-district_extent="27.5798 48.2693 37.5919 44.2016" # ulx uly lrx lry
-region="crimea"                #++-
-#region="sevastopol"            #+--
-#region="mykolaiv"              #+--
-#region="odesa"                 #---
-#region="zaporizhia"            #---
-#region="kherson"               #---
+#district="south"
+#district_extent="27.5798 48.2693 37.5919 44.2016" # ulx uly lrx lry
+#region="crimea"                
+#region="sevastopol"            
+#region="mykolaiv"              
+#region="odesa"                 
+#region="zaporizhia"            
+#region="kherson"               
 #------------------
 
 #---- Moldova -----
