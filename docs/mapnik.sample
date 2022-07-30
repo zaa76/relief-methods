@@ -1,0 +1,17 @@
+<Layer name="ukraine_crimea_hypso">
+   <StyleName>relief_hypso_style</StyleName>
+   <Datasource>
+     <Parameter name="type">pgraster</Parameter>
+     <Parameter name="password">gis_password</Parameter>
+     <Parameter name="host">10.72.150.49</Parameter>
+     <Parameter name="port">5432</Parameter>
+     <Parameter name="user">gis</Parameter>
+     <Parameter name="dbname">relief</Parameter>
+     <Parameter name="max_async_connection">2</Parameter>
+     <Parameter name="table">hypso.ukraine_crimea</Parameter>
+     <Parameter name="raster_field">rast</Parameter>
+     <Parameter name="key_field">rid</Parameter>
+     <Parameter name="use_overviews">true</Parameter>
+     <Parameter name="extent_from_subquery">true</Parameter>
+   </Datasource>
+</Layer>
