@@ -1,3 +1,11 @@
+<Style name="relief_hypso_style">
+   <Rule>
+     &maxscale_zoom5;
+     &minscale_zoom12;
+     <RasterSymbolizer scaling="cubic" />
+   </Rule>
+</Style>
+
 <Layer name="ukraine_crimea_hypso">
    <StyleName>relief_hypso_style</StyleName>
    <Datasource>
