@@ -3,7 +3,7 @@
 main_dir=$(pwd)
 
 . ${main_dir}/config
-. ${main_dir}/regions_pg
+. ${main_dir}/regions
 
 work_dir="${main_dir}/work/${country}/${district}/${region}"
 in_dir="${main_dir}/work/out"
