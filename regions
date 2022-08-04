@@ -29,12 +29,13 @@ region="cherkasy"
 #region="ternopil"              
 
    # North
+#district="north"   
 #district_extent="27.0696 52.447 35.7894 49.1045" # ulx uly lrx lry
-#district="zhytomyr"            
-#district="sumy"                
-#district="kyiv"                
-#district="kyivoblast"          
-#district="chernihiv"           
+#region="zhytomyr"            
+#region="sumy"                
+#region="kyiv"                
+#region="kyivoblast"          
+#region="chernihiv"           
 
    # East
 #district="east"
@@ -65,7 +66,7 @@ region="cherkasy"
 #hgt_max_lon="31"
 #hgt_max_lat="49"
 #district="moldova"
-#district_extent="26.6164 48.4921 30.1638 45.4672" #left=26.6164 bottom=45.4672 right=30.1638 top=48.4921 | ulx uly lrx lry
+#district_extent="26.6164 48.4921 30.1638 45.4672" # ulx uly lrx lry
 #region="moldova"
 #-----------------
 
