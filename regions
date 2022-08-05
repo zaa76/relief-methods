@@ -10,7 +10,7 @@ hgt_max_lat="53"
 
    # Center
 district="center"
-district_extent="27.2235 50.6296 35.6794 47.6304" # ulx uly lrx lry
+district_extent="27.2235 50.6296 35.6794 47.6304"
 region="cherkasy"              
 #region="kirovohrad"            
 #region="poltava"               
@@ -18,7 +18,7 @@ region="cherkasy"
 
    # West
 #district="west"
-#district_extent="22.0051 52.0028 28.0328 47.6527" # ulx uly lrx lry
+#district_extent="22.0051 52.0028 28.0328 47.6527"
 #region="chernivtsi"            
 #region="lviv"                  
 #region="zakarpattia"           
@@ -30,7 +30,7 @@ region="cherkasy"
 
    # North
 #district="north"   
-#district_extent="27.0696 52.447 35.7894 49.1045" # ulx uly lrx lry
+#district_extent="27.0696 52.447 35.7894 49.1045"
 #region="zhytomyr"            
 #region="sumy"                
 #region="kyiv"                
@@ -39,7 +39,7 @@ region="cherkasy"
 
    # East
 #district="east"
-#district_extent="32.9145 50.511 40.3155 46.8022" # ulx uly lrx lry
+#district_extent="32.9145 50.511 40.3155 46.8022"
 #region="dnipropetrovsk"        
 #region="donetsk"               
 #region="luhansk"               
@@ -47,7 +47,7 @@ region="cherkasy"
 
    # South
 #district="south"
-#district_extent="27.5798 48.2693 37.5919 44.2016" # ulx uly lrx lry
+#district_extent="27.5798 48.2693 37.5919 44.2016"
 #region="crimea"                
 #region="sevastopol"            
 #region="mykolaiv"              
@@ -80,7 +80,7 @@ region="cherkasy"
 #hgt_max_lon="33"
 #hgt_max_lat="54"
 #district="south"
-#district_extent="22.76 51.08 32.87 53.55"
+#district_extent="22.9404 53.5821 32.1582 51.1947"
 #region="brest"
 #region="homyel"
 #------------------
@@ -92,12 +92,12 @@ region="cherkasy"
 #country_hgt="central-fed"
 #hgt_lat_semisphere="N"
 #hgt_lon_semisphere="E"
-#hgt_min_lon="30"
+#hgt_min_lon="31"
 #hgt_min_lat="49"
-#hgt_max_lon="48"
-#hgt_max_lat="60"
+#hgt_max_lon="45"
+#hgt_max_lat="55"
 #districr="central-fed"
-#district_extent="31.1832 54.1408 42.9974 49.432" 30.7283 49.5578 47.6396 59.6237
+#district_extent="31.1801 54.1008 43.1007 49.4983"
 #region="belgorod"
 #region="bryansk"
 #region="voronezh"
@@ -107,12 +107,12 @@ region="cherkasy"
 #country_hgt="south-fed"
 #hgt_lat_semisphere="N"
 #hgt_lon_semisphere="E"
-#hgt_min_lon="32"
+#hgt_min_lon="36"
 #hgt_min_lat="43"
-#hgt_max_lon="50"
-#hgt_max_lat="52"
+#hgt_max_lon="43"
+#hgt_max_lat="51"
 #distrist="south-fed"
-#district_extent="36.5225 50.3079 44.5136 43.0924" 32.2015 43.2244 49.8862 51.2477 (left,bottom,right,top|ulx uly lrx lry)
+#district_extent="36.5304 50.2405 42.7987 43.2244"
 #region="krasnodarkrai"
 #region="rostov"
 
@@ -124,7 +124,7 @@ region="cherkasy"
 #hgt_min_lat="54"
 #hgt_max_lon="23"
 #hgt_max_lat="56"
-#district_extent="19.4041 55.3843 22.8868 54.3182"  # ulx uly lrx lry
+#district_extent="19.4041 55.3843 22.8868 54.3182"
 #district="kaliningrad"
 #region="kaliningrad"
 #-----------------
@@ -132,25 +132,50 @@ region="cherkasy"
 #---- Hungary -----
 #country="hungary"
 #country_hgt="hungary"
+#hgt_lat_semisphere="N"
+#hgt_lon_semisphere="E"
+#hgt_min_lon="19"
+#hgt_min_lat="46"
+#hgt_max_lon="23"
+#hgt_max_lat="48"
 #district="greatplainandnorth"
-#region="greatplainandnorth"
-#district_extent="19.999 48.6667 23.2662 46.9572"
+#district_extent="19.999 48.6667 23.2662 46.9572" # ulx uly lrx lry
+#region="szabolcs-szatmar-bereg"  
 #-----------------
 
+#---- Poland -----
 #country="poland"
 #country_hgt="poland"
-#district="lubelskie"
-#district="podkarpackie"
+#hgt_lat_semisphere="N"
+#hgt_lon_semisphere="E"
+#hgt_min_lon="20"
+#hgt_min_lat="48"
+#hgt_max_lon="25"
+#hgt_max_lat="53"
+#district="eastern"
+#district_extent="20.9737 52.3827 24.3857 48.8747"
+#region="lubelskie" 
+#region="podkarpackie"
+#-----------------
 
 #---- Romania ----
 #country="romania"
 #country_hgt="romania"
-#district="botosani"
-#district="maramures"
-#district="satumare"
-#district="suceava"
-#district="tulcea"
-#-----------------
+#hgt_lat_semisphere="N"
+#hgt_lon_semisphere="E"
+    166 #hgt_min_lon="20"
+    167 #hgt_min_lat="44"
+    168 #hgt_max_lon="31"
+    169 #hgt_max_lat="49"
+    170 #district="east"
+    171 #district_extent="20 49.0145 31 44.0158" # ulx uly lrx lry
+    172 #region="botosani"                   #---
+    173 #region="maramures"                  #---
+    174 #region="satumare"                   #---
+    175 #region="suceava"                    #---
+    176 #region="tulcea"                     #---
+    177 #-----------------
+
 
 #---- Slovenia ----
 #country="slovenia"
