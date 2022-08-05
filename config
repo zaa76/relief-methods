@@ -8,7 +8,6 @@ smooth_num_iter="4"
 smooth_max_diff="1.5"
 
 resample_resolution="19.109257071294062687"
-#resample_resolution="90"
 resample_method="cubicspline"
 
 nodata_hgt="-32768"
