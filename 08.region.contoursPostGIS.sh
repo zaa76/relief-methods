@@ -5,6 +5,8 @@ main_dir=$(pwd)
 . ${main_dir}/config
 . ${main_dir}/regions
 
+gdal_contour="tools/gdal_contour_smooth"
+
 work_dir="${main_dir}/work/${country}/${district}/${region}"
 style="${main_dir}/templates/contours.style"
 template="${main_dir}/templates/contours_empty.pbf"
@@ -54,7 +56,7 @@ fi
 
 rm -vf ${work_dir}/contours.*
 echo -n " > [CONTOURS] create contours ESRI Shapefile: "
-gdal_contour_smooth \
+$gdal_contour \
     -3d \
     -i $contours_interval \
     -a level \
