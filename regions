@@ -163,22 +163,30 @@ region="cherkasy"
 #country_hgt="romania"
 #hgt_lat_semisphere="N"
 #hgt_lon_semisphere="E"
-    166 #hgt_min_lon="20"
-    167 #hgt_min_lat="44"
-    168 #hgt_max_lon="31"
-    169 #hgt_max_lat="49"
-    170 #district="east"
-    171 #district_extent="20 49.0145 31 44.0158" # ulx uly lrx lry
-    172 #region="botosani"                   #---
-    173 #region="maramures"                  #---
-    174 #region="satumare"                   #---
-    175 #region="suceava"                    #---
-    176 #region="tulcea"                     #---
-    177 #-----------------
+#hgt_min_lon="20"
+#hgt_min_lat="44"
+#hgt_max_lon="31"
+#hgt_max_lat="49"
+#district="east"
+#district_extent="20 49.0145 31 44.0158"
+#region="botosani"
+#region="maramures"
+#region="satumare"
+#region="suceava"
+#region="tulcea"
+#-----------------
 
-
-#---- Slovenia ----
+#---- Slovakia ----
 #country="slovenia"
 #country_hgt="slovenia"
+#hgt_lat_semisphere="N"
+#hgt_lon_semisphere="E"
+#hgt_min_lon="19"
+#hgt_min_lat="48"
+#hgt_max_lon="23"
+#hgt_max_lat="50"
 #district="eastern"
+#district_extent="19.769 49.5032 22.6924 48.2932"
+#region="kosice"
+#region="presov"
 #------------------
