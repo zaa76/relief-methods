@@ -8,8 +8,6 @@ main_dir=$(pwd)
 work_dir="${main_dir}/work/${country}/${district}"
 in_dir="${work_dir}/../dem"
 
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib64/
-
 mkdir -p $work_dir
 
 pushd ${in_dir}
@@ -19,8 +17,6 @@ if [ "${district_extent}" = "-1" ] ; then
 else
     extent_option="-ul_lr ${district_extent} "
 fi
-
-#source /opt/phyghtmap/bin/activate
 
 rm -vf "${work_dir}/merged.tif"
 echo -n " > Merged all GTiff for ${country}/${district}: "
@@ -37,10 +33,4 @@ gdal_merge.py \
 
 popd
 
-#deactivate
-
-#echo " > clear filled images: "
-#rm -vf ${work_dir}/*.bil
-#rm -vf ${work_dir}/*.hdr
-#rm -vf ${work_dir}/*.prj
 echo "done."
