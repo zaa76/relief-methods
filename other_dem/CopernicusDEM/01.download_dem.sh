@@ -14,16 +14,9 @@ downloads_list="downloads"
 rm -vf ${work_dir}/${files_list}
 rm -vf ${work_dir}/${downloads_list}
 
-#Europe/Ukraine
-#Europe/Belarus
-#Europe/Moldova
-#Asia/Russian_Federation
-#wget --ftp-user=zimasanya --ftp-password=P@ssw0rd --ftps-implicit --no-check-certificate ftps://cdsdata.copernicus.eu:990/DEM-datasets/COP-DEM_GLO-30-DTED/2021_1/Europe/Ukraine/mapping.csv
-#cdsdata.copernicus.eu:990/DEM-datasets/COP-DEM_GLO-30-DTED/2021_1/Europe/Ukraine/DEM1_SAR_DTE_30_20110117T151606_20130508T150845_ADS_000000_6tTc.DEM.tar
-
 server_url="ftps://cdsdata.copernicus.eu:990/DEM-datasets/COP-DEM_GLO-30-DTED/2021_1"
-copernicus_user="zimasanya"
-copernicus_password="P@ssw0rd"
+copernicus_user="<user of Copernicus resourse>"
+copernicus_password="<password of Copernicus resourse>"
 
 wget \
     --ftps-implicit \
@@ -64,7 +57,5 @@ for d in $(cat ${work_dir}/${downloads_list} | sort | uniq) ; do
 	echo "not tile, cleared."
     fi
 done
-
-#rm -vf $tmp_file_list
-
+####################
 #aws s3 cp s3://copernicus-dem-30m/Copernicus_DSM_COG_10_N46_00_E008_00_DEM/Copernicus_DSM_COG_10_N46_00_E008_00_DEM.tif . --no-sign-request
