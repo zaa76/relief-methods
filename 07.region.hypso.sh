@@ -132,7 +132,7 @@ echo "done."
 
 mkdir -p "${out_dir}"
 rm -fv "${out_dir}/${country}_${region}.hypso.tif"
-echo -n " > [PNG -> GTiff]: (Alpha + NoData: \"${hypso_relief_nodata} ${hypso_relief_nodata} ${hypso_relief_nodata}\" -> "0"): "
+echo -n " > [PNG -> GTiff]: (Alpha + NoData: \"${hypso_relief_nodata} ${hypso_relief_nodata} ${hypso_relief_nodata}\"): "
 
     # *** Tiled options ***
     # -co "BLOCKXSIZE=64" -co "BLOCKYSIZE=64" -co "TILED=YES"
@@ -140,7 +140,7 @@ echo -n " > [PNG -> GTiff]: (Alpha + NoData: \"${hypso_relief_nodata} ${hypso_re
 gdalwarp \
     -of GTiff \
     -srcnodata "${hypso_relief_nodata} ${hypso_relief_nodata} ${hypso_relief_nodata}" \
-    -dstnodata 0 \
+    -dstalpha \
     -t_srs "EPSG:3857" \
     -co "COMPRESS=ZSTD" \
     -co "ZSTD_LEVEL=9" \
