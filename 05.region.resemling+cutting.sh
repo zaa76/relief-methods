@@ -23,6 +23,7 @@ function resampling() {
 	-ot Float32 \
 	-srcnodata ${nodata_tif} \
 	-cutline ${boundaries} \
+	-crop_to_cutline \
 	-wo "CUTLINE_ALL_TOUCHED=TRUE" \
 	-wo "SAMPLE_STEPS=100" \
 	-co "COMPRESS=LZW" \
